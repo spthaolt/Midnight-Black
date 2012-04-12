@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset=utf-8 />
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Jplayer-dark-skin : I found this great jPlayer skin but it only worked for jPlayer 2.0.0. So I took it and updated it to work with jPlayer 2.1.0. Enjoy!" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Midnight Black</title>
-	
-	<link href="skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+<!-- Website Design By: www.happyworm.com -->
+<title>Demo : jPlayer as video playlist and audio playlist players</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
 <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
 <script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
 
 	new jPlayerPlaylist({
 		jPlayer: "#jquery_jplayer_1",
 		cssSelectorAncestor: "#jp_container_1"
+	}, [
+		{
+			title:"Big Buck Bunny Trailer",
+			artist:"Blender Foundation",
+			free:true,
+			m4v:"http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
+			ogv:"http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
+			webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
+			poster:"http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+		},
+		{
+			title:"Finding Nemo Teaser",
+			artist:"Pixar",
+			m4v: "http://www.jplayer.org/video/m4v/Finding_Nemo_Teaser.m4v",
+			ogv: "http://www.jplayer.org/video/ogv/Finding_Nemo_Teaser.ogv",
+			webmv: "http://www.jplayer.org/video/webm/Finding_Nemo_Teaser.webm",
+			poster: "http://www.jplayer.org/video/poster/Finding_Nemo_Teaser_640x352.png"
+		},
+		{
+			title:"Incredibles Teaser",
+			artist:"Pixar",
+			m4v: "http://www.jplayer.org/video/m4v/Incredibles_Teaser.m4v",
+			ogv: "http://www.jplayer.org/video/ogv/Incredibles_Teaser.ogv",
+			webmv: "http://www.jplayer.org/video/webm/Incredibles_Teaser.webm",
+			poster: "http://www.jplayer.org/video/poster/Incredibles_Teaser_640x272.png"
+		}
+	], {
+		swfPath: "js",
+		supplied: "webmv, ogv, m4v"
+	});
+
+	new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_2",
+		cssSelectorAncestor: "#jp_container_2"
 	}, [
 		{
 			title:"Cro Magnon Man",
@@ -96,40 +128,69 @@
 });
 //]]>
 </script>
-  </head>
+</head>
+<body>
+		<div id="jp_container_1" class="jp-video jp-video-270p">
+			<div class="jp-type-playlist">
+				<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+				<div class="jp-gui">
+					<div class="jp-video-play">
+						<a href="javascript:;" class="jp-video-play-icon" tabindex="1">play</a>
+					</div>
+					<div class="jp-interface">
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-current-time"></div>
+						<div class="jp-duration"></div>
+						<div class="jp-controls-holder">
+							<ul class="jp-controls">
+								<li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+								<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+								<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+								<li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+								<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+								<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+								<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+								<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+							</ul>
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+							<ul class="jp-toggles">
+								<li><a href="javascript:;" class="jp-full-screen" tabindex="1" title="full screen">full screen</a></li>
+								<li><a href="javascript:;" class="jp-restore-screen" tabindex="1" title="restore screen">restore screen</a></li>
+								<li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li>
+								<li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+								<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+								<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+							</ul>
+						</div>
+						<div class="jp-title">
+							<ul>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="jp-playlist">
+					<ul>
+						<!-- The method Playlist.displayPlaylist() uses this unordered list -->
+						<li></li>
+					</ul>
+				</div>
+				<div class="jp-no-solution">
+					<span>Update Required</span>
+					To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+				</div>
+			</div>
+		</div>
 
-  <body>
+		<div id="jquery_jplayer_2" class="jp-jplayer"></div>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/TheInfection/jPlayer-Dark-Skin">Fork Me on GitHub</a>
-
-          <h1 id="project_title">Midnight Black - A jPlayer Skin</h1>
-          <h2 id="project_tagline">I found this great jPlayer skin but it only worked for jPlayer 2.0.0. So I took it and updated it to work with jPlayer 2.1.0. Enjoy!</h2>
-
-          <section id="downloads">
-            <a class="zip_download_link" href="https://github.com/TheInfection/jPlayer-Dark-Skin/zipball/master">Download this project as a .zip file</a>
-            <a class="tar_download_link" href="https://github.com/TheInfection/jPlayer-Dark-Skin/tarball/master">Download this project as a tar.gz file</a>
-          </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Midnight Black</h3>
-
-<p>Quite a while ago, I found this great jPlayer skin on GitHub. It was nice, simple, and great looking! But what I soon found out was that it was only for jPlayer 2.0.0. That got me thinking, "Hey! Why don't I update it?!". And I did just that!</p>
-
-<p>It actually ended up looking pretty good :D</p>
-
-<h3>Example</h3>
-
-<p>
-<div id="jquery_jplayer_1" class="jp-jplayer"></div>
-
-		<div id="jp_container_1" class="jp-audio">
+		<div id="jp_container_2" class="jp-audio">
 			<div class="jp-type-playlist">
 				<div class="jp-gui jp-interface">
 					<ul class="jp-controls">
@@ -172,31 +233,6 @@
 				</div>
 			</div>
 		</div>
-</p>
+</body>
 
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact support@github.com and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Jplayer-dark-skin maintained by <a href="https://github.com/TheInfection">TheInfection</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
 </html>
