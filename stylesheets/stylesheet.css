@@ -126,11 +126,11 @@ a {
 }
 
 div.jp-audio a {
-	transition: none !important;
 	-webkit-transition: none !important;
 	-moz-transition: none !important;
 	-o-transition: none !important;
 	-ms-transition: none !important;
+	transition: none !important;
 }
 
 #main_content a:hover {
