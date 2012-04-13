@@ -133,6 +133,10 @@ div.jp-audio a {
 	transition: none !important;
 }
 
+div.jp-audio a:hover {
+	color:#FFF;
+}
+
 #main_content a:hover {
   color: #0069ba;
   text-shadow: #0090ff 0px 0px 2px;
