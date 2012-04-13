@@ -191,7 +191,8 @@ a.jp-next:hover {
 
 div.jp-progress {
 	overflow:hidden;
-	background-color: none;
+	background: url("jplayer.dark.png") 0 -202px repeat-x;
+	border-radius: 5px;
 }
 div.jp-audio div.jp-progress {
 	position: absolute;
