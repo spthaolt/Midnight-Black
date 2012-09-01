@@ -192,12 +192,12 @@ a.jp-next:hover {
 div.jp-progress {
 	overflow:hidden;
 	background: url("jplayer.midnight.black.png") 0 -202px repeat-x;
-	border-radius: 5px;
 }
 div.jp-audio div.jp-progress {
 	position: absolute;
 	top:27px;
 	height:15px;
+	border-radius: 5px;
 }
 div.jp-audio div.jp-type-single div.jp-progress {
 	left:110px;
@@ -236,7 +236,7 @@ div.jp-video div.jp-play-bar {
 
 /* The seeking class is added/removed inside jPlayer */
 div.jp-seeking-bg {
-	background: url("jplayer.midnight.black.seeking.gif");
+	background: url("jplayer.black.seeking.gif");
 }
 
 /* @end */
@@ -426,7 +426,7 @@ div.jp-title li {
 }
 div.jp-playlist li {
 	padding:5px 15px 5px 15px;
-	border-bottom: none;
+	border-bottom: 1px solid #121212;
 	background: url(jplayer.midnight.black.playlist_bg.png);
 	text-shadow: 0 1px 0px rgba(0,0,0,0.3);
 }
@@ -438,7 +438,7 @@ div.jp-playlist li div {
 /* Note that the first-child (IE6) and last-child (IE6/7/8) selectors do not work on IE */
 
 div.jp-type-playlist div.jp-playlist li:last-child {
-	padding:5px 0 5px 15px;
+	padding:5px 15px 5px 15px;
 	border-bottom:none;
 }
 div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
@@ -557,7 +557,10 @@ ul.jp-toggles {
 
 div.jp-audio .jp-type-single ul.jp-toggles {
 	width:28px;
-	margin-top: -4px;
+	margin: 0 0 0 -14px;
+	position: absolute;
+	left: 50%;
+	top: -5px;
 }
 div.jp-audio .jp-type-playlist ul.jp-toggles {
 	width:65px;
