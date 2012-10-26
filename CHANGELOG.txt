@@ -1,0 +1,15 @@
+CHANGELOG
+============
+
+Oct 26, 2012
+ ~ Made the player very fluid
+ ~ Fixed positioning errors in certain browsers
+ ~ Added support for jPlayer 2.2.8
+ ~ Added support for the stream player
+ ~ Miscellaneous bug fixes
+
+Sep 01, 2012
+ ~ Severel bug fixes
+
+Apr 11, 2012
+ ~ Initial Release
