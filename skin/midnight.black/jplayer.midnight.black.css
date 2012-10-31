@@ -224,7 +224,7 @@ div.jp-audio div.jp-progress {
 	position: absolute;
 	top:27px;
 	height:15px;
-	border-radius: 5px;
+	background: transparent;
 }
 div.jp-audio div.jp-type-single div.jp-progress {
 	left:100px;
@@ -246,12 +246,14 @@ div.jp-seek-bar {
 	height:100%;
 	cursor: pointer;
 	border-radius: 5px;
+	box-shadow: inset 0 0 5px -1px #000;
 }
 div.jp-play-bar {
 	background: url("jplayer.midnight.black.png") 0 -218px repeat-x ;
 	width:0px;
 	height:100%;
 	border-radius: 5px;
+	box-shadow: inset 0 0 5px #000;
 }
 div.jp-video div.jp-seek-bar {
 	border-radius: 0 !important;
@@ -365,6 +367,7 @@ div.jp-audio div.jp-volume-bar {
 	background:url("jplayer.midnight.black.png") 0 -250px repeat-x;
 	height:5px;
 	cursor:pointer;
+	box-shadow: inset 0 0 3px #000;
 	border-radius:5px;
 }
 
@@ -398,6 +401,7 @@ div.jp-volume-bar-value {
 	width:0px;
 	height:5px;
 	border-radius: 5px;
+	box-shadow: inset 0 0 3px #000;
 }
 
 /* @end */
