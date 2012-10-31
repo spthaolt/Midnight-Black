@@ -9,9 +9,10 @@
  *  - http://www.opensource.org/licenses/mit-license.php
  *  - http://www.gnu.org/copyleft/gpl.html
  *
- * Authors: Per Sandström and Kasim Ahmic
- * Skin Version: 2.5 (jPlayer 2.2.8)
- * Date: October 26th 2012
+ * Authors: Per Sandström (Updated to support jPlayer 2.1.0 and on by Kasim Ahmic)
+ * Maintainer: Kasim Ahmic (TheInfection)
+ * Skin Version: 2.5 (jPlayer 2.1.x, 2.2.x)
+ * Date: October 31st 2012
  */
  
 *:focus, *:active {
@@ -23,7 +24,7 @@
 }
 
 div.jp-jplayer {
-	background-color: #000000;
+	background-color: #000;
 	margin: auto auto;
 }
 
@@ -454,7 +455,7 @@ div.jp-title {
 div.jp-title,
 div.jp-playlist {
 	width:100%;
-	background: url(jplayer.midnight.black.playlist_bg.png);
+	background: url(jplayer.midnight.black.playlist.png);
 	border:0;
 	text-align: left !important;
 }
@@ -478,7 +479,7 @@ div.jp-title li {
 div.jp-playlist li {
 	padding:5px 15px 5px 15px;
 	border-bottom: 1px solid #121212;
-	background: url(jplayer.midnight.black.playlist_bg.png);
+	background: url(jplayer.midnight.black.playlist.png);
 	text-shadow: 0 1px 0px rgba(0,0,0,0.3);
 }
 
