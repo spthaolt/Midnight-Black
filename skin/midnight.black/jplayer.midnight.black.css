@@ -15,6 +15,10 @@
  * Date: 21st December 2012
  */
 
+a:active {
+	outline: none; /* To keep Google Chrome from adding that ugly yellow border/outlune on buttons when clicked */
+}
+
 div.jp-audio,
 div.jp-audio-stream,
 div.jp-video {
@@ -666,9 +670,9 @@ a.jp-shuffle-off:hover {
 
 .jp-no-solution {
 	padding:5px;
-	font-size:.8em;
-	background:url("jplayer.midnight.black.interface.png") repeat-x;
-	border:1px solid #191919;
+	font-size:.67em;
+	background: #121112 url("jplayer.midnight.black.interface.png") repeat-x;
+	border-top:1px solid #191919;
 	color:#CCC;
 	display:none;
 	text-align: center;
