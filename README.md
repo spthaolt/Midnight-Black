@@ -6,7 +6,7 @@ It actually ended up looking pretty good :D
 
 Announcments
 =========
-The latest version of Midnight Black (v2.6) has been submitted with an entirely redone CSS file. Now it's much easier to maintain the entire project than it was before. Also, in the future, I plan on adding HD support but that won't come around until version 3.0 or whenever the next version of jPlayer comes out.
+The latest version of Midnight Black (v2.6.1) has been submitted with an entirely redone CSS file. Now it's much easier to maintain the entire project than it was before. Also, in the future, I plan on adding HD support but that won't come around until version 3.0 or whenever the next version of jPlayer comes out.
 
 Compatibility
 =========
