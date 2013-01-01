@@ -458,6 +458,7 @@ div.jp-playlist li {
 	padding:6px 15px;
 	border-bottom:1px solid #121212;
 	background: #343433 url("jplayer.midnight.black.playlist.png") repeat-x;
+	text-shadow: 0 1px 0px rgba(0,0,0,0.3);
 }
 
 div.jp-playlist li div {
@@ -481,6 +482,7 @@ div.jp-type-playlist div.jp-playlist a:hover {
 }
 div.jp-type-playlist div.jp-playlist a.jp-playlist-current {
 	color:#FFF;
+	font-weight: bold;
 }
 
 div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
